@@ -1,0 +1,18 @@
+class Solution {
+  public int solution(String s) {
+    int answer = 0;
+       
+    // 자르기 가능한 가장 큰 문자열을 찾는다.
+    String ansStr = findMinStr(s);
+    // 문자열의 length를 반환한다.
+    answer = ansStr.length();
+    return answer;
+  }
+
+  public String findMinStr(String str){
+    // TODO 문자열을 여러 크기로 자른다.
+    String resultStr = str;
+     
+    return resultStr;
+  }
+}
