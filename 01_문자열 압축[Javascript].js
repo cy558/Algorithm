@@ -7,7 +7,7 @@ function solution(s) {
     let minSize = s.length;
     if(s.length == 1) return 1;
     
-    for(let i=1; i<=s.length/2; i++){
+    for(let i=1; i<=Math.floor(s.length / 2); i++){
         let summList=[];
         summList.push(s.substring(0,i));
         for(let j = 1;  i * (j + 1) <= s.length; j++){
@@ -35,10 +35,7 @@ function solution(s) {
                  summList[i]= dup + summList[i];
              }
          }
-        
-        if(minSize > summList.join("").length){
-            minSize = summList.join("").length;
-        }
+        minSize = Math.min(minSize, summList.join("").length)
     }
     return minSize;
 }
