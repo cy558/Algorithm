@@ -3,12 +3,13 @@
 01_문자열 압축
 */
 
-
 import java.util.ArrayList;
 import java.util.List;
+
 class Solution {
   public int solution(String s) {
     int answer = 0;
+
     if (s.length() == 1)
       return 1;
       
@@ -30,6 +31,7 @@ class Solution {
       String rs = findDuplicateValue(list);
       rsList.add(rs);
     }
+
     // 최종 압축한 문자열 리스트
     int minSize = rsList.get(0).length();
     int minInd = 0;
@@ -44,6 +46,7 @@ class Solution {
     answer = ansStr.length();
     return answer;
   }
+
   // 배열에서 중복을 찾아 문자의 개수와 반복되는 값으로 표현 한 후 String 리턴
   private String findDuplicateValue(List<String> list) {
     int dup = 1;
@@ -60,9 +63,6 @@ class Solution {
           }
           dup++;
           list.set(j, "");
-          if (dup == 1) {
-            break;
-          }
         } else {
           break;
         }
